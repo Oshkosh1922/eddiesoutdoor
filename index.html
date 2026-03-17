@@ -33,9 +33,26 @@
             display:flex;align-items:center;justify-content:center;
             z-index:90000;flex-direction:column;
         }
+        .splash::after{
+            content:'';
+            position:absolute;
+            width:420px;height:280px;
+            border-radius:50%;
+            background:radial-gradient(ellipse 100% 100% at center, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.35) 45%, transparent 100%);
+            filter:blur(25px);
+            pointer-events:none;
+            animation:vigPulse 4.2s ease forwards;
+        }
+        @keyframes vigPulse{
+            0%{opacity:0;transform:scale(0.5)}
+            12%{opacity:1;transform:scale(1)}
+            75%{opacity:1;transform:scale(1.1)}
+            90%{opacity:.6;transform:scale(1.15)}
+            100%{opacity:0;transform:scale(1.2)}
+        }
         .splash-logo{
             width:350px;height:350px;object-fit:contain;
-            opacity:0;
+            opacity:0;position:relative;z-index:1;
             animation:sLogo 4.2s cubic-bezier(.4,0,.2,1) forwards;
         }
         .splash.bye{
@@ -412,6 +429,7 @@
             .form-card{padding:2rem 1.5rem;border-radius:20px}
             .gallery-section::before,.gallery-section::after{width:40px}
             .splash-logo{width:260px;height:260px}
+            .splash::after{width:300px;height:200px}
         }
         @media(max-width:480px){
             .hero-content h1{font-size:2.8rem}
@@ -439,7 +457,7 @@
     <div class="hero-vig"></div>
     <div class="hero-content">
         <img src="assets/ed.png" alt="Eddie's Outdoor" class="hero-mascot">
-        <h1 id="heroTitle">PREMIUM<br>OUTDOOR<br><span class="accent">ADVERTISING</span></h1>
+        <h1 id="heroTitle">PREMIERE<br><span class="accent">GLOBAL MEDIA</span><br>PLACEMENTS</h1>
         <p>Supplying companies of all sizes with the most premiere media placements in the world. All options are wholesale priced and available both long and short term.</p>
         <a href="#contact" class="hero-cta">
             <span class="shine"></span>
@@ -458,19 +476,19 @@
         <p>Real placements. Real results. Real impact.</p>
     </div>
     <div class="glide-track" id="glideTrack">
-        <div class="glide-item"><img src="assets/1000.jpg" alt="Premium Urban Placements"><div class="glide-overlay"><span>Premium Urban Placements</span></div></div>
-        <div class="glide-item"><img src="assets/IMG_0405.jpg" alt="Digital & Static Billboards"><div class="glide-overlay"><span>Digital & Static Billboards</span></div></div>
-        <div class="glide-item"><img src="assets/IMG_0406.JPG" alt="Eye-Catching Designs"><div class="glide-overlay"><span>Eye-Catching Designs</span></div></div>
-        <div class="glide-item"><img src="assets/IMG_0407.JPG" alt="Street Level Impact"><div class="glide-overlay"><span>Street Level Impact</span></div></div>
-        <div class="glide-item"><img src="assets/IMG_0408.JPG" alt="Large Format Displays"><div class="glide-overlay"><span>Large Format Displays</span></div></div>
-        <div class="glide-item"><img src="assets/IMG_0409.JPG" alt="Multi-Location Campaigns"><div class="glide-overlay"><span>Multi-Location Campaigns</span></div></div>
+        <div class="glide-item"><img src="assets/1000.jpg" alt=""></div>
+        <div class="glide-item"><img src="assets/IMG_0405.jpg" alt=""></div>
+        <div class="glide-item"><img src="assets/IMG_0406.JPG" alt=""></div>
+        <div class="glide-item"><img src="assets/IMG_0407.JPG" alt=""></div>
+        <div class="glide-item"><img src="assets/IMG_0408.JPG" alt=""></div>
+        <div class="glide-item"><img src="assets/IMG_0409.JPG" alt=""></div>
         <!-- Duplicates for seamless loop -->
-        <div class="glide-item"><img src="assets/1000.jpg" alt="Premium Urban Placements"><div class="glide-overlay"><span>Premium Urban Placements</span></div></div>
-        <div class="glide-item"><img src="assets/IMG_0405.jpg" alt="Digital & Static Billboards"><div class="glide-overlay"><span>Digital & Static Billboards</span></div></div>
-        <div class="glide-item"><img src="assets/IMG_0406.JPG" alt="Eye-Catching Designs"><div class="glide-overlay"><span>Eye-Catching Designs</span></div></div>
-        <div class="glide-item"><img src="assets/IMG_0407.JPG" alt="Street Level Impact"><div class="glide-overlay"><span>Street Level Impact</span></div></div>
-        <div class="glide-item"><img src="assets/IMG_0408.JPG" alt="Large Format Displays"><div class="glide-overlay"><span>Large Format Displays</span></div></div>
-        <div class="glide-item"><img src="assets/IMG_0409.JPG" alt="Multi-Location Campaigns"><div class="glide-overlay"><span>Multi-Location Campaigns</span></div></div>
+        <div class="glide-item"><img src="assets/1000.jpg" alt=""></div>
+        <div class="glide-item"><img src="assets/IMG_0405.jpg" alt=""></div>
+        <div class="glide-item"><img src="assets/IMG_0406.JPG" alt=""></div>
+        <div class="glide-item"><img src="assets/IMG_0407.JPG" alt=""></div>
+        <div class="glide-item"><img src="assets/IMG_0408.JPG" alt=""></div>
+        <div class="glide-item"><img src="assets/IMG_0409.JPG" alt=""></div>
     </div>
 </section>
 
